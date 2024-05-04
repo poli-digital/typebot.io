@@ -1307,6 +1307,28 @@ importers:
         specifier: 6.0.0
         version: 6.0.0(eslint@8.44.0)(typescript@5.4.5)
 
+  packages/forge/blocks/agendorCrm:
+    dependencies:
+      ky:
+        specifier: ^1.2.4
+        version: 1.2.4
+    devDependencies:
+      '@typebot.io/forge':
+        specifier: workspace:*
+        version: link:../../core
+      '@typebot.io/lib':
+        specifier: workspace:*
+        version: link:../../../lib
+      '@typebot.io/tsconfig':
+        specifier: workspace:*
+        version: link:../../../tsconfig
+      '@types/react':
+        specifier: 18.2.15
+        version: 18.2.15
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+
   packages/forge/blocks/anthropic:
     dependencies:
       '@anthropic-ai/sdk':
@@ -1594,6 +1616,9 @@ importers:
 
   packages/forge/repository:
     devDependencies:
+      '@typebot.io/agendor-crm-block':
+        specifier: workspace:*
+        version: link:../blocks/agendorCrm
       '@typebot.io/anthropic-block':
         specifier: workspace:*
         version: link:../blocks/anthropic
@@ -16857,6 +16882,11 @@ packages:
   /ky@1.2.3:
     resolution: {integrity: sha512-2IM3VssHfG2zYz2FsHRUqIp8chhLc9uxDMcK2THxgFfv8pQhnMfN8L0ul+iW4RdBl5AglF8ooPIflRm3yNH0IA==}
     engines: {node: '>=18'}
+
+  /ky@1.2.4:
+    resolution: {integrity: sha512-CfSrf4a0yj1n6WgPT6kQNQOopIGLkQzqSAXo05oKByaH7G3SiqW4a8jGox0p9whMXqO49H7ljgigivrMyycAVA==}
+    engines: {node: '>=18'}
+    dev: false
 
   /language-subtag-registry@0.3.22:
     resolution: {integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==}
