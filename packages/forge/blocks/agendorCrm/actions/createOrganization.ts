@@ -2,7 +2,12 @@ import { createAction, option } from '@typebot.io/forge'
 import { auth } from '../auth'
 import ky, { HTTPError } from 'ky'
 import { baseUrl } from '../contants'
-import { Organization, SimpleResponse } from '../type'
+import {
+  Category,
+  Organization,
+  PaginationResponse,
+  SimpleResponse,
+} from '../type'
 
 export const createOrganization = createAction({
   name: 'Create organization',
@@ -18,12 +23,38 @@ export const createOrganization = createAction({
       isRequired: false,
       helperText: 'The CNPJ of the organization.',
     }),
+    category: option.string.layout({
+      label: 'Category',
+      isRequired: false,
+      helperText: 'The category of the organization.',
+      fetcher: 'fetchCategories',
+    }),
     saveOrganizationVariableId: option.string.layout({
       label: 'Save organization ID in variable',
       placeholder: 'Select a variable',
       inputType: 'variableDropdown',
     }),
   }),
+  fetchers: [
+    {
+      id: 'fetchCategories',
+      fetch: async ({ credentials }) => {
+        const response = await ky
+          .get(baseUrl + '/v3/categories', {
+            headers: {
+              Authorization: 'Token ' + credentials.apiKey,
+            },
+          })
+          .json<PaginationResponse<Category>>()
+
+        return response.data.map((category) => ({
+          value: `${category.id}`, //string parsing
+          label: category.name,
+        }))
+      },
+      dependencies: [],
+    },
+  ],
   run: {
     server: async ({ credentials, options, variables, logs }) => {
       if (!options.name) logs.add('Name is missing.')

@@ -27,6 +27,11 @@ export type Organization = {
   cnpj: string
 }
 
+export type Category = {
+  id: number
+  name: string
+}
+
 export type User = {
   id: string
   name: string
