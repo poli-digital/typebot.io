@@ -1,5 +1,5 @@
 import { z } from '../../../zod'
-import { chatwootBlockSchema } from './chatwoot'
+// import { chatwootBlockSchema } from './chatwoot'
 import { googleAnalyticsBlockSchema } from './googleAnalytics'
 import { googleSheetsBlockSchemas } from './googleSheets'
 import { openAIBlockSchema } from './openai'
@@ -9,16 +9,16 @@ import { zemanticAiBlockSchema } from './zemanticAi'
 import { zapierBlockSchemas } from './zapier'
 import { httpBlockSchemas } from './webhook'
 import { makeComBlockSchemas } from './makeCom'
-import { pabblyConnectBlockSchemas } from './pabblyConnect'
+// import { pabblyConnectBlockSchemas } from './pabblyConnect'
 
 export const integrationBlockSchemas = {
   v5: [
-    chatwootBlockSchema,
+    // chatwootBlockSchema,
     googleAnalyticsBlockSchema,
     googleSheetsBlockSchemas.v5,
     makeComBlockSchemas.v5,
     openAIBlockSchema,
-    pabblyConnectBlockSchemas.v5,
+    // pabblyConnectBlockSchemas.v5,
     sendEmailBlockSchema,
     httpBlockSchemas.v5,
     zapierBlockSchemas.v5,
@@ -26,12 +26,12 @@ export const integrationBlockSchemas = {
     zemanticAiBlockSchema,
   ],
   v6: [
-    chatwootBlockSchema,
+    // chatwootBlockSchema,
     googleAnalyticsBlockSchema,
     googleSheetsBlockSchemas.v6,
     makeComBlockSchemas.v6,
     openAIBlockSchema,
-    pabblyConnectBlockSchemas.v6,
+    // pabblyConnectBlockSchemas.v6,
     sendEmailBlockSchema,
     httpBlockSchemas.v6,
     zapierBlockSchemas.v6,
