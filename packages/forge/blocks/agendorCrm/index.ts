@@ -1,7 +1,8 @@
 import { createBlock } from '@typebot.io/forge'
 import { AgendorCrmLogo } from './logo'
 import { auth } from './auth'
-import { createPeson } from './actions/createPerson'
+import { createPerson } from './actions/createPerson'
+import { createOrganization } from './actions/createOrganization'
 
 export const agendorCrmBlock = createBlock({
   id: 'agendor-crm',
@@ -9,5 +10,5 @@ export const agendorCrmBlock = createBlock({
   tags: [],
   LightLogo: AgendorCrmLogo,
   auth,
-  actions: [createPeson],
+  actions: [createOrganization, createPerson],
 })

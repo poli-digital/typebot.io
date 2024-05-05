@@ -7,7 +7,17 @@ export type Organization = {
   cnpj: string
 }
 
-export type PageResponse<T> = {
+export type SimpleResponse<T> = {
+  data: T
+  meta: {
+    totalCount?: number
+  }
+  links: {
+    self?: string
+  }
+}
+
+export type PaginationResponse<T> = {
   data: T[]
   meta: {
     totalCount?: number
