@@ -11,6 +11,7 @@ import { calComBlock } from '@typebot.io/cal-com-block'
 import { zemanticAiBlock } from '@typebot.io/zemantic-ai-block'
 import { openAIBlock } from '@typebot.io/openai-block'
 import { agendorCrmBlock } from '@typebot.io/agendor-crm-block'
+import { poliBlock } from '@typebot.io/poli-block'
 
 export const forgedBlocks = {
   [openAIBlock.id]: openAIBlock,
@@ -25,4 +26,5 @@ export const forgedBlocks = {
   [togetherAiBlock.id]: togetherAiBlock,
   [openRouterBlock.id]: openRouterBlock,
   [agendorCrmBlock.id]: agendorCrmBlock,
+  [poliBlock.id]: poliBlock,
 }

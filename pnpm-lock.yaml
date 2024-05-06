@@ -1513,6 +1513,28 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
 
+  packages/forge/blocks/poli:
+    dependencies:
+      ky:
+        specifier: ^1.2.4
+        version: 1.2.4
+    devDependencies:
+      '@typebot.io/forge':
+        specifier: workspace:*
+        version: link:../../core
+      '@typebot.io/lib':
+        specifier: workspace:*
+        version: link:../../../lib
+      '@typebot.io/tsconfig':
+        specifier: workspace:*
+        version: link:../../../tsconfig
+      '@types/react':
+        specifier: 18.2.15
+        version: 18.2.15
+      typescript:
+        specifier: 5.4.5
+        version: 5.4.5
+
   packages/forge/blocks/qrcode:
     dependencies:
       qrcode:
@@ -1646,6 +1668,9 @@ importers:
       '@typebot.io/openai-block':
         specifier: workspace:*
         version: link:../blocks/openai
+      '@typebot.io/poli-block':
+        specifier: workspace:*
+        version: link:../blocks/poli
       '@typebot.io/qrcode-block':
         specifier: workspace:*
         version: link:../blocks/qrcode

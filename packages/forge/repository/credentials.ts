@@ -22,6 +22,8 @@ import { zemanticAiBlock } from '@typebot.io/zemantic-ai-block'
 import { zemanticAiCredentialsSchema } from '@typebot.io/zemantic-ai-block/schemas'
 import { agendorCrmBlock } from '@typebot.io/agendor-crm-block'
 import { agendorCrmCredentialsSchema } from '@typebot.io/agendor-crm-block/schemas'
+import { poliBlock } from '@typebot.io/poli-block'
+import { poliCredentialsSchema } from '@typebot.io/poli-block/schemas'
 
 export const forgedCredentialsSchemas = {
   [openAIBlock.id]: openAICredentialsSchema,
@@ -36,4 +38,5 @@ export const forgedCredentialsSchemas = {
   [togetherAiBlock.id]: togetherAiCredentialsSchema,
   [openRouterBlock.id]: openRouterCredentialsSchema,
   [agendorCrmBlock.id]: agendorCrmCredentialsSchema,
+  [poliBlock.id]: poliCredentialsSchema,
 }

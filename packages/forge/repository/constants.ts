@@ -14,4 +14,5 @@ export const forgedBlockIds = [
   'together-ai',
   'open-router',
   'agendor-crm',
+  'poli',
 ] as const satisfies ForgedBlock['type'][]

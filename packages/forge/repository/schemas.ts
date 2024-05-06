@@ -23,6 +23,8 @@ import { zemanticAiBlock } from '@typebot.io/zemantic-ai-block'
 import { zemanticAiBlockSchema } from '@typebot.io/zemantic-ai-block/schemas'
 import { agendorCrmBlock } from '@typebot.io/agendor-crm-block'
 import { agendorCrmBlockSchema } from '@typebot.io/agendor-crm-block/schemas'
+import { poliBlock } from '@typebot.io/poli-block'
+import { poliBlockSchema } from '@typebot.io/poli-block/schemas'
 
 export const forgedBlockSchemas = {
   [openAIBlock.id]: openAIBlockSchema,
@@ -37,4 +39,5 @@ export const forgedBlockSchemas = {
   [togetherAiBlock.id]: togetherAiBlockSchema,
   [openRouterBlock.id]: openRouterBlockSchema,
   [agendorCrmBlock.id]: agendorCrmBlockSchema,
+  [poliBlock.id]: poliBlockSchema,
 }
