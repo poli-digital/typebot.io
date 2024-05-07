@@ -6,8 +6,8 @@ export enum IntegrationBlockType {
   EMAIL = 'Email',
   ZAPIER = 'Zapier',
   MAKE_COM = 'Make.com',
-  // PABBLY_CONNECT = 'Pabbly',
-  // CHATWOOT = 'Chatwoot',
+  PABBLY_CONNECT = 'Pabbly',
+  CHATWOOT = 'Chatwoot',
   PIXEL = 'Pixel',
   ZEMANTIC_AI = 'Zemantic AI',
 }

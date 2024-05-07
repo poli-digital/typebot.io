@@ -176,6 +176,11 @@ export const BlocksSideBar = () => {
             {Object.values(IntegrationBlockType)
               .concat(forgedBlockIds as any)
               .filter((type) => !legacyIntegrationBlocks.includes(type))
+              .filter(
+                (type) =>
+                  type !== IntegrationBlockType.CHATWOOT &&
+                  type !== IntegrationBlockType.PABBLY_CONNECT
+              )
               .map((type) => (
                 <BlockCard
                   key={type}
